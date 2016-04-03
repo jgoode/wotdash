@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'xb)d*&&n5q9oibdrv=vx36=jn8wk0%bm-kdfbq9)_ny0q#x*2^'
+SECRET_KEY = os.environ['WOTDASH_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'wotdash.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'wotdash',
-        'USER': 'wotdashuser',
-        'PASSWORD': 'wotdashuser',
+        'NAME': os.environ['WOTDASH_DB'],
+        'USER': os.environ['WOTDASH_DBUSER'],
+        'PASSWORD': os.environ['WOTDASH_DBPASS'],
         'HOST': 'localhost',
         'PORT': '',
     }

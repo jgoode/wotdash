@@ -27,24 +27,6 @@ class PlayerQuery:
 
         return st
 
-if __name__ == "__main__":
-    print("--------------------------------------")
-    print("..Test # 1 - PlayerQuery")
-    s = """{
-        "status": "ok",
-        "meta": {
-            "count": 1
-        },
-        "data": [
-            {
-                "nickname": "The_Mule_10",
-                "account_id": 1012435080x
-            }
-        ]
-    }"""
-    pq = PlayerQuery(s)
-    print(pq.to_string())
-    print("--------------------------------------")
 
 
 
