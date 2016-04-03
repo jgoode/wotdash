@@ -13,3 +13,6 @@ build/
 test/report/
 py34/
 wotdash.sock
+.idea/
+.DS_Store
+info/
